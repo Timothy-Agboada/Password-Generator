@@ -1,0 +1,174 @@
+/* General Body and Font Styles */
+body {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    color: #8a8a8a;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Password Display */
+.password-display-container {
+    background-color: #242424;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+#passwordDisplay {
+    font-size: 1.8em;
+    color: #e0e0e0;
+    word-break: break-all;
+    text-align: left;
+}
+#passwordDisplay.placeholder {
+    color: #555;
+}
+
+#copyBtn {
+    background: none;
+    border: none;
+    color: #a4ffaf;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+#copyBtn:hover {
+    color: #fff;
+}
+
+/* Settings Container */
+.settings-container {
+    background-color: #242424;
+    padding: 20px;
+}
+
+.setting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.setting label {
+    font-size: 1.1em;
+}
+
+.length-control {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#lengthValue {
+    font-size: 1.8em;
+    color: #a4ffaf;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+    background: #121212;
+    height: 8px;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 28px;
+    width: 28px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    border: 2px solid #a4ffaf;
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: #a4ffaf;
+}
+
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e0e0e0;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+input[type="checkbox"]:checked {
+    background-color: #a4ffaf;
+    border-color: #a4ffaf;
+}
+input[type="checkbox"]:checked::before {
+    content: '\f00c'; /* Font Awesome check icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: #121212;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+}
+
+/* Strength Indicator */
+.strength-container {
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#strengthIndicator {
+    display: flex;
+    gap: 5px;
+}
+
+.strength-bar {
+    width: 10px;
+    height: 28px;
+    border: 2px solid #e0e0e0;
+}
+.strength-bar.weak { background-color: #f64a4a; border-color: #f64a4a;}
+.strength-bar.medium { background-color: #fb7c58; border-color: #fb7c58;}
+.strength-bar.strong { background-color: #f8cd65; border-color: #f8cd65;}
+.strength-bar.very-strong { background-color: #a4ffaf; border-color: #a4ffaf;}
+
+
+/* Generate Button */
+#generateBtn {
+    width: 100%;
+    padding: 20px;
+    background-color: #a4ffaf;
+    color: #121212;
+    border: 2px solid #a4ffaf;
+    font-size: 1.2em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+#generateBtn:hover {
+    background-color: transparent;
+    color: #a4ffaf;
+}
